@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZVINZV</title>
+  <script src="https://kit.fontawesome.com/45ec540ecb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../dist/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap');
+    *{
+      font-family: 'Readex Pro', sans-serif;
+    }
+    .fa-brands{
+      width: 100%;
+    }
+    @media (min-width: 990px) {
+      html{
+        font-size: 22px;
+      }
+    }
+    @media (min-width: 980px) {
+      html{
+        font-size: 19px;
+      }
+    }
+    @media (min-width: 768px) {
+      html{
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 767px) {
+      html{
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 340px) {
+      html{
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body id="body" class="min-h-screen bg-slate-100">
+  <div id="ccs"></div>
+  <div id="csc">
+  </div>
+  <div id="ssc"></div>
+  <div class="bg-slate-800 min-h-screen flex items-center justify-center flex-col">
+    <div class="wrapper bg-slate-600 p-7 rounded-2xl flex flex-col items-center" style=" width: clamp(250px, 90vw, 550px);">
+      <div class="card h-full  flex flex-col justify-between text-center w-full gap-10">
+        <div class="header">
+          <input type="number" id="inputUser" class="w-full text-xl rounded-lg py-3 px-4 mb-2 bg-slate-50 outline-none border-none" placeholder="ادخل الرقم...">
+          <div>
+            <h2 class="text-slate-500 w-10/12 mx-auto">الرجاء إدخال رقم التطبيق بالارقام الإنجليزي فقط.</h2>
+          </div>
+        </div>
+        <div class="footer flex gap-2 justify-center">
+          <button id="searchBtn" class="text-lg bg-slate-200 hover:bg-slate-500 hover:text-slate-100 transition-all px-3 py-2 rounded-md w-full">البحث والدخول للتطبيق</button>
+          <a href="./allApp.html" id="allBtn" class="text-lg bg-slate-200 hover:bg-slate-500 hover:text-slate-100 transition-all px-3 py-2 rounded-md w-full">عرض كل التطبيقات</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class="text-center text-slate-50 text-2xl my-4">تابعني على المواقع التالية</h1>
+      <ul class="flex justify-center items-center gap-7 p-3 my-4 rounded-lg flex-wrap">
+        <li><a href="https://www.instagram.com/x748a/" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-orange-600 fa-instagram fa-fw"></i></a></li>
+        <li><a href="https://www.youtube.com/@zvinzv" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-red-500 fa-youtube fa-fw"></i></a></li>
+        <li><a href="https://www.facebook.com/ZVINZV/" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-blue-600 fa-facebook fa-fw"></i></a></li>
+        <li><a href="https://t.me/ZVINZV" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-blue-400 fa-telegram fa-fw"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+  <script>
+    let cook = document.getElementById("csc")
+    if(localStorage.getItem("cook") === null || localStorage.getItem("data") === null){
+      cook.innerHTML = 
+      `      
+        <div id="not" class="absolute flex items-center bg-blue-300 border-2 border-blue-700 z-40 bottom-0 right-0 w-80 m-4 p-2 rounded-md">
+          <button id="cookBtn" onclick="deleteMe('not')" class="text-xl px-2 rounded-xl text-black m-1 leading-tight aspect-square">X</button>    
+          <p>سيتم حفظ البينات في الــــ Cookies.</p>
+        </div>
+      `
+      let cookBtn = document.getElementById("cookBtn")
+      cookBtn.addEventListener("click", ()=>{
+        localStorage.setItem("cook", true)
+      })
+    }
+  </script>
+</body>
+</html>

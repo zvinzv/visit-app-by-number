@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZVINZV</title>
+  <script src="https://kit.fontawesome.com/45ec540ecb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../dist/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400&display=swap');
+    *{
+      font-family: 'Readex Pro', sans-serif;
+    }
+    .main{
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 500px)) !important;
+      gap: 20px !important;
+      place-content: center !important;
+      place-items: center !important;
+    }
+    .fa-brands{
+      width: 100%;
+    }
+    @media (min-width: 990px) {
+      html{
+        font-size: 22px;
+      }
+    }
+    @media (min-width: 980px) {
+      html{
+        font-size: 19px;
+      }
+    }
+    @media (min-width: 768px) {
+      html{
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 767px) {
+      html{
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 480px) {
+      .header{
+        display: grid !important;
+        grid-template-rows: 1fr 1fr;
+        height: 300px;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .header .header_2{
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .header .header_2 *{
+        text-align: center;
+      }
+    }
+  </style>
+  <script src="./app.js" type='module'></script>
+</head>
+<body class="bg-slate-800 min-h-screen">
+  <div id="ccs"></div>
+  <h1 class="text-center text-4xl pt-10 text-slate-50">كل التطبيقات</h1>
+  <div class="main w-10/12 mx-auto py-10">
+    
+
+  </div>
+  <div>
+    <h1 class="text-center text-2xl pb-3 text-slate-50"><a href="./index.html" class="underline hover:text-blue-600">الذهاب الى صفحة الدخول</a></h1>
+    <h1 class="text-center text-slate-50 text-2xl my-4">يمكنك متابعتي على المواقع التالية
+    </h1>
+    <ul class="flex justify-center items-center gap-7 p-3 my-4 rounded-lg flex-wrap">
+      <li><a href="https://www.instagram.com/x748a/" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-orange-600 fa-instagram fa-fw"></i></a></li>
+      <li><a href="https://www.youtube.com/@zvinzv" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-red-500 fa-youtube fa-fw"></i></a></li>
+      <li><a href="https://www.facebook.com/ZVINZV/" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-blue-600 fa-facebook fa-fw"></i></a></li>
+      <li><a href="https://t.me/ZVINZV" target="_blank" class="flex justify-center items-center rounded-lg w-fit text-6xl"><i class="fa-brands text-slate-400 transition-all hover:text-blue-400 fa-telegram fa-fw"></i></a></li>
+    </ul>
+  </div>
+  <script>
+    function deleteMe(id){
+      document.getElementById(id).remove()
+    }
+  </script>
+</body>
+</html>
